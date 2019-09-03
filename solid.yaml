@@ -36,7 +36,7 @@ components:
   schemas:
     Card:
       properties:
-        longitude: 
+        subdomain: 
           type: string
   responses:
     404NotFound:
