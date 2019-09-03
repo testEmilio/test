@@ -44,8 +44,6 @@ components:\
   schemas:\
     Card:\
       properties:\
-        deviceId:\
-          type: number\
         subdomain:\
           type: string\
   responses:\
