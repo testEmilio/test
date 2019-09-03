@@ -1,48 +1,49 @@
-openapi: 3.0.1\
-info:\
-  title: Integrati\'f3n Solid with Peaas\
-  description: This application integrates Solid with PeaaS.\
-  version: '1.0'\
-  termsOfService: ''\
-  contact:\
-    name: Integration Solid with Peaas\
-    url: ''\
-    email: ecastilll@alumnos.unex.es\
-paths:\
-  /Card:\
-    get:\
-      tags:\
-        - Card\
-      summary: Gets the user's card\
-      description: Get the user's profile\
-      operationId: getCard\
-      parameters:\
-        - name: subdomain\
-          in: query\
-          required: true\
-          schema:\
-            type: string\
-      responses:\
-        '200':\
-          description: Successful response\
-          content:\
-            application/json:\
-              schema:\
-                $ref: '#/components/schemas/Card'\
-        '404':\
-          $ref: '#/components/responses/404NotFound'\
-components:\
-  schemas:\
-    Card:\
-      properties:\
-        subdomain:\
-          type: string\
-  responses:\
-    404NotFound:\
-      description: Not found response\
-      content:\
-        text/plain:\
-          schema:\
-            title: Endpoint not found\
-            type: string\
-            example: Not found}
+
+openapi: 3.0.1
+info:
+  title: Integration Solid with Peaas
+  description: This application integrates Solid with PeaaS.
+  version: '1.0'
+  termsOfService: ''
+  contact:
+    name: Integration Solide with Peaas
+    url: ''
+    email: ecastilll@alumnos.unex.es
+paths:
+  /card:
+    get:
+      tags:
+        - Card
+      summary: Gets the user's profile
+      description: The user's profile
+      operationId: getCard
+      parameters:
+        - name: subdomain
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Card'
+        '404':
+          $ref: '#/components/responses/404NotFound'
+components:
+  schemas:
+    Card:
+      properties:
+        longitude: 
+          type: string
+  responses:
+    404NotFound:
+      description: Not found response
+      content:
+        text/plain:
+          schema:
+            title: Endpoint not found
+            type: string
+            example: Not found
